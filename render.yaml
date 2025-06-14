@@ -1,0 +1,9 @@
+services:
+- type: worker
+  name: insta-bolo-bot
+  env: python
+  envVars:
+  - key: INSTA_USERNAME
+  - key: INSTA_PASSWORD
+  buildCommand: pip install -r requirements.txt
+  startCommand: python insta_bot.py
